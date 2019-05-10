@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#d0d0d0</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="splashscreen_bg">#222222</color>
+    <color name="color1">#2c8bea</color>
+    <color name="color2">#3c9f10</color>
+    <color name="color3">#d1d1d1</color>
+    <color name="color4">#353535</color>
+    <color name="color5">#ffa600</color>
+
+    <color name="book_loading_background">#ffffff</color>
+    <color name="book_loading_book">#048498</color>
+    <color name="book_loading_page">#ffffff</color>
+
+</resources>
