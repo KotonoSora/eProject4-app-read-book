@@ -305,7 +305,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-condensed"
-                            android:text="Click tới danh sách chương"
+                            android:text="Click danh sách chương truyện"
                             android:textColor="#ff0000"
                             android:textSize="20sp" />
 

@@ -41,9 +41,6 @@
             android:name=".MainActivity_DocSach"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity_DocPdf_and_Epub"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".MainActivity_ViewListChuong"
             android:screenOrientation="portrait" />
         <activity

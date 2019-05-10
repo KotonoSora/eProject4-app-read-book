@@ -2,7 +2,13 @@ package com.example.lamth.app_tong_the_gioi_sach;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -29,29 +35,23 @@ import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
 public class Url_config {
 
-    public static String url_get_ListAllQuyenSach = "http://adminsachvui.giaynct.com/api/get_ListAllQuyenSach.ashx?id_allquyensach="; // page
+    public static String url_get_ListAllQuyenSach = "http://truyentranh.math1to12.com/api/get_ListAllQuyenSach.ashx?id_allquyensach="; // page
 
-    public static String url_get_ListAllChuong = "http://adminsachvui.giaynct.com/api/get_ListAllChuong.ashx?id_chuong="; // page
+    public static String url_get_ListAllChuong = "http://truyentranh.math1to12.com/api/get_ListAllChuong.ashx?id_chuong="; // page
 
-    public static String url_get_TimKiemQuyenSach = "http://adminsachvui.giaynct.com/api/get_TimKiemQuyenSach.ashx?timkiem="; // id_TheLoaiSach
+    public static String url_get_get_InfoQuyenSach = "http://truyentranh.math1to12.com/api/get_InfoQuyenSach.ashx?Id_quyensach="; //
 
-    public static String url_get_get_InfoQuyenSach = "http://adminsachvui.giaynct.com/api/get_InfoQuyenSach.ashx?Id_quyensach="; //
+    public static String url_detail_Chuong = "http://truyentranh.math1to12.com/api/View_ChuongQuyenSach.aspx?id_chuong="; // id_qs
 
-    public static String url_get_InfoChuongPDF = "http://adminsachvui.giaynct.com/api/get_InfoChuongPDF.ashx?id_quyensachpdf=";
+    public static String url_get_all_idChuong = "http://truyentranh.math1to12.com/api/get_ListIdChuong.ashx?id_c_quyensach="; // id_quyensach
 
-    public static String url_detail_Chuong = "http://adminsachvui.giaynct.com/api/View_ChuongQuyenSach.aspx?id_chuong="; // id_qs
+    public static  String url_image_server = "http://truyentranh.math1to12.com" ;
 
-    public static String url_get_all_idChuong = "http://adminsachvui.giaynct.com/api/get_ListIdChuong.ashx?id_c_quyensach="; // id_quyensach
+    public static String url_get_3QuyenSach_TheoTheLoaiSach = "http://truyentranh.math1to12.com/api/get_3QuyenSach_TheoTheLoaiSach.ashx";
 
-    public static  String url_image_server = "http://adminsachvui.giaynct.com" ;
+    public static String url_get_TimKiemTong_QuyenSach = "http://truyentranh.math1to12.com/api/get_TimKiemTong_QuyenSach.ashx?timkiem="; // + &id_loaisach= &page=
 
-    public static String url_get_View_IdTheLoaiSach = "http://adminsachvui.giaynct.com/api/get_All_QuyenSach_New_LuotView.ashx?id_loaisach=";
-
-    public static String url_get_3QuyenSach_TheoTheLoaiSach = "http://adminsachvui.giaynct.com/api/get_3QuyenSach_TheoTheLoaiSach.ashx";
-
-    public static String url_get_TimKiemTong_QuyenSach = "http://adminsachvui.giaynct.com/api/get_TimKiemTong_QuyenSach.ashx?timkiem="; // + &id_loaisach= &page=
-
-    public static String url_get_Name_TheLoaiSach = "http://adminsachvui.giaynct.com/api/get_Name_TheLoaiSach.ashx";
+    public static String url_get_Name_TheLoaiSach = "http://truyentranh.math1to12.com/api/get_Name_TheLoaiSach.ashx";
 
     public static String Url_rate = "https://play.google.com/store/apps/details?id=com.free.booksonline.thegioisach";
             //"https://play.google.com/store/apps/details?id=com.sachhay.tamly.kynangsong";
@@ -60,8 +60,8 @@ public class Url_config {
 
     public static final String downloadDirectory = "Download/View.File.PDF/com.free.booksonline.thegioisach" ;
 
-    public final static String banner_footer = "ca-app-pub-2432109083481493/4022941386";
-    public final static String banner_full = "ca-app-pub-2432109083481493/6477714336";
+    public final static String banner_footer = "ca-app-pub-2432109083481493/40229413861";
+    public final static String banner_full = "ca-app-pub-2432109083481493/64777143361";
 
     // show popup load
     public static AlertDialog showpop_up_Load(Context content) {

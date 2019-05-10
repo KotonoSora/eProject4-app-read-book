@@ -18,7 +18,7 @@
         <RelativeLayout
             android:layout_width="2dp"
             android:layout_height="30dp"
-            android:background="#151516">
+            android:background="#048498">
 
         </RelativeLayout>
 
@@ -37,7 +37,7 @@
                 android:layout_centerVertical="false"
                 android:fontFamily="sans-serif-condensed"
                 android:text="Tên Thể Loại Sách"
-                android:textColor="#048498"
+                android:textColor="#1a1b1b"
                 android:textSize="18sp" />
 
             <TextView
@@ -48,7 +48,7 @@
                 android:layout_centerInParent="true"
                 android:fontFamily="sans-serif-condensed"
                 android:text="Xem thêm ..."
-                android:textColor="#ff5751"
+                android:textColor="#adadad"
                 android:textSize="12sp" />
         </RelativeLayout>
 
@@ -69,16 +69,26 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp4"
             android:layout_weight="1"
-            android:background="@drawable/tao_bong_mo"
             android:orientation="vertical">
 
-            <ImageView
+            <!--<ImageView-->
+            <!--android:id="@+id/imageView9"-->
+            <!--android:layout_width="140dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:scaleType="fitXY"-->
+            <!--app:srcCompat="@drawable/antest" />-->
+
+            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
                 android:id="@+id/imageView9"
-                android:layout_width="140dp"
-                android:layout_height="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/antest" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/antest"
+                app:siShape="@drawable/shape_rounded_rectangle"
+                app:siSquare="true" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -99,15 +109,25 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp4"
             android:layout_weight="1"
-            android:background="@drawable/tao_bong_mo"
             android:orientation="vertical">
 
-            <ImageView
+            <!--<ImageView-->
+                <!--android:id="@+id/imageView110"-->
+                <!--android:layout_width="140dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:scaleType="fitXY"-->
+                <!--app:srcCompat="@drawable/antest" />-->
+
+            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
                 android:id="@+id/imageView110"
-                android:layout_width="140dp"
-                android:layout_height="100dp"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/antest" />
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/antest"
+                app:siShape="@drawable/shape_rounded_rectangle"
+                app:siSquare="true" />
 
             <TextView
                 android:id="@+id/textView100"
@@ -127,15 +147,25 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp4"
             android:layout_weight="1"
-            android:background="@drawable/tao_bong_mo"
             android:orientation="vertical">
 
-            <ImageView
+            <!--<ImageView-->
+                <!--android:id="@+id/imageView11"-->
+                <!--android:layout_width="140dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:scaleType="fitXY"-->
+                <!--app:srcCompat="@drawable/antest" />-->
+
+            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
                 android:id="@+id/imageView11"
-                android:layout_width="140dp"
-                android:layout_height="100dp"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/antest" />
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/antest"
+                app:siShape="@drawable/shape_rounded_rectangle"
+                app:siSquare="true" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -156,7 +186,8 @@
             android:layout_margin="@dimen/dp4"
             android:layout_weight="1"
             android:background="@drawable/tao_bong_mo"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView13"

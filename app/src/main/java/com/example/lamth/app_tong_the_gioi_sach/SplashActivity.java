@@ -20,10 +20,8 @@ public class SplashActivity extends AppCompatActivity {
 
     int myProgress;
     ProgressBar progressBar2;
-    private ProgressDialog pDialog;
-    public static final int CUSTOM_PROGRESS_DIALOG = 0;
 
-    private int SPLASH_TIMER = 4000;
+    private int SPLASH_TIMER = 2000;
     InterstitialAd mInterstitialAd;
 
     private void requestNewInterstitial() {

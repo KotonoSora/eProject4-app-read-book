@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="@dimen/dp16"
-            android:paddingRight="@dimen/dp16">
+            android:paddingLeft="@dimen/dp4"
+            android:paddingRight="@dimen/dp4">
 
             <RelativeLayout
                 android:id="@+id/re_menu"
@@ -48,9 +48,9 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
-                    android:gravity="center"
                     android:padding="@dimen/dp16"
                     android:text="@string/app_name"
                     android:textColor="#201e1e"
@@ -143,7 +143,7 @@
             <RelativeLayout
                 android:id="@+id/re_list"
                 android:layout_width="match_parent"
-                android:layout_height="2865dp"
+                android:layout_height="1300dp"
                 android:layout_weight="1">
 
                 <GridView

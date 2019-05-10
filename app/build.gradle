@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     buildToolsVersion '27.0.3'
     defaultConfig {
-        applicationId "com.free.booksonline.thegioisach"
+        applicationId "com.project4.truyentranh"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 2
@@ -32,5 +32,5 @@ dependencies {
     implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
     implementation 'com.github.d-max:spots-dialog:1.1@aar'
     implementation 'com.google.android.gms:play-services-ads:11.0.4'
-
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
 }

@@ -19,7 +19,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                android:background="@drawable/bg_menu_nav"
+                android:background="@drawable/side_nav_bar"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -59,7 +59,7 @@
                             android:gravity="center"
                             android:text="@string/app_name"
                             android:textColor="#f3fdff"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
 
                     </RelativeLayout>
                 </LinearLayout>
@@ -168,7 +168,7 @@
             <RelativeLayout
                 android:id="@+id/re_view_theloaisach"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="53dp"
                 android:padding="@dimen/dp8">
 
                 <LinearLayout
@@ -196,7 +196,7 @@
                         android:fontFamily="sans-serif"
                         android:paddingLeft="@dimen/dp16"
                         android:paddingRight="@dimen/dp16"
-                        android:text="Thể loại sách"
+                        android:text="Thể loại truyện"
                         android:textColor="#7c7c7c"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -246,7 +246,8 @@
                 android:layout_height="1dp"
                 android:layout_marginLeft="@dimen/dp18"
                 android:layout_marginRight="@dimen/dp18"
-                android:background="#f0f0f0"></RelativeLayout>
+                android:background="#f0f0f0"
+                android:visibility="gone"></RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/re_more_app"
@@ -282,7 +283,8 @@
                 android:id="@+id/re_rate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/dp8">
+                android:padding="@dimen/dp8"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -318,7 +320,8 @@
                 android:id="@+id/re_more"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/dp8">
+                android:padding="@dimen/dp8"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -356,7 +359,8 @@
                 android:id="@+id/re_share"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/dp8">
+                android:padding="@dimen/dp8"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"

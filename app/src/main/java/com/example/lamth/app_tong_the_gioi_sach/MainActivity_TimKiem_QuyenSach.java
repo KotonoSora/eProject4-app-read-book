@@ -43,6 +43,7 @@ import static com.example.lamth.app_tong_the_gioi_sach.Url_config.get_dulieu;
 import static com.example.lamth.app_tong_the_gioi_sach.Url_config.showpop_up_Load;
 import static com.example.lamth.app_tong_the_gioi_sach.Url_config.showpop_up_tinh_getlistview;
 import static com.example.lamth.app_tong_the_gioi_sach.Url_config.url_get_TimKiemTong_QuyenSach;
+import static com.example.lamth.app_tong_the_gioi_sach.Url_config.url_image_server;
 
 public class MainActivity_TimKiem_QuyenSach extends AppCompatActivity {
 
@@ -300,7 +301,7 @@ public class MainActivity_TimKiem_QuyenSach extends AppCompatActivity {
                                     try{
                                         if(olist[1] != null && olist[1] != ""){
                                             try {
-                                                String url_anh = "http://adminsachvui.giaynct.com" + olist[1].toString();
+                                                String url_anh = url_image_server + olist[1].toString();
                                                 url_anh = url_anh.replace('\\', '/');
                                                 InputStream in = new java.net.URL(url_anh).openStream();
                                                 mHinhAnh = getResizedBitmap(BitmapFactory.decodeStream(in),140);
@@ -345,7 +346,6 @@ public class MainActivity_TimKiem_QuyenSach extends AppCompatActivity {
                 adapter = new ArrayAdapter<ListQuyenSach>(getApplicationContext(), android.R.layout.activity_list_item, listdata);
                 listview = (ListView) findViewById(R.id.listview);
                 listview.setAdapter(adapter);
-                TastyToast.makeText(getApplicationContext(), "Dữ liệu đang cập nhật!", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
 
                 if (listdata.size() > 0){
 
@@ -353,13 +353,13 @@ public class MainActivity_TimKiem_QuyenSach extends AppCompatActivity {
                             listview.setAdapter(new CustomListQuyenSach(getApplicationContext(), listdata));
                             adapter.notifyDataSetChanged();
                         }
+                        TastyToast.makeText(getApplicationContext(), "Dữ liệu đang cập nhật!", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
                         try
                         {
                             listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                     if(id_theloaisch > 0){
-
                                         Intent intent = new Intent(getApplicationContext(), MainActivity_QuyenSach.class);
                                         intent.putExtra("id_quyensach", listdata.get(position).getId_QuyenSach());
                                         intent.putExtra("id_LoaiSach", id_theloaisch); // string
@@ -374,12 +374,12 @@ public class MainActivity_TimKiem_QuyenSach extends AppCompatActivity {
                                         startActivity(intent);
                                         //showInterstitial();
                                     }
-                                   // showInterstitial();
+                                    // showInterstitial();
                                 }
                             });
                         }catch (Exception pd){}
 
-                    so_page.setText("" + (currentPage));
+                        so_page.setText("" + (currentPage));
 
                 }else {
                     adapter.clear();

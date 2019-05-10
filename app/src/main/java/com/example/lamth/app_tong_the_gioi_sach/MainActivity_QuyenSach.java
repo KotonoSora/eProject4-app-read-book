@@ -276,7 +276,7 @@ public class MainActivity_QuyenSach extends AppCompatActivity {
                 tv_luotxem.setText(LuotXem + " lượt view ");
                 tv_chuong.setText("(Số chương : " + TongChuong + ")");
                 if (LoaiTruyen.equals("1")){
-                    tv_loaitruyen.setText("Truyện chữ");
+                    tv_loaitruyen.setText("Truyện tranh");
                     try{
                         tv_chuong.setVisibility(View.VISIBLE);
                         re_truyenchu.setVisibility(View.VISIBLE);
@@ -297,19 +297,19 @@ public class MainActivity_QuyenSach extends AppCompatActivity {
                 }else {
                     tv_loaitruyen.setText("Truyện file PDF");
                     try{
-                        tv_chuong.setVisibility(View.INVISIBLE);
-                        re_truyenfile.setVisibility(View.VISIBLE);
-                        re_truyenchu.setVisibility(View.GONE);
-                        re_truyenfile.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent intent = new Intent(getApplicationContext(), MainActivity_DocPdf_and_Epub.class);
-                                intent.putExtra("id_chuongpdf",Id_quyensach);
-                                intent.putExtra("tenquyensach",TenQuyenSach);
-                                startActivity(intent);
-                                showInterstitial();
-                            }
-                        });
+//                        tv_chuong.setVisibility(View.INVISIBLE);
+//                        re_truyenfile.setVisibility(View.VISIBLE);
+//                        re_truyenchu.setVisibility(View.GONE);
+//                        re_truyenfile.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                Intent intent = new Intent(getApplicationContext(), MainActivity_DocPdf_and_Epub.class);
+//                                intent.putExtra("id_chuongpdf",Id_quyensach);
+//                                intent.putExtra("tenquyensach",TenQuyenSach);
+//                                startActivity(intent);
+//                                showInterstitial();
+//                            }
+//                        });
 
                     }catch (Exception ex){}
                 }

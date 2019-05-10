@@ -98,7 +98,7 @@
                     android:background="@drawable/bg_textbox"
                     android:ems="10"
                     android:fontFamily="sans-serif"
-                    android:hint="Nhập nội dung tìm kiếm ..."
+                    android:hint="Tìm kiếm ..."
                     android:textAlignment="textStart"
                     android:textColor="#058095"
                     android:textSize="18sp" />
@@ -131,10 +131,10 @@
                             android:id="@+id/textView17"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="-- Thể loại sách --"
+                            android:text="-- Thể loại truyện --"
                             android:textAlignment="center"
                             android:textColor="#058095"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
                     </RelativeLayout>
 
                     <RelativeLayout

@@ -42,6 +42,7 @@ import dmax.dialog.SpotsDialog;
 import static com.example.lamth.app_tong_the_gioi_sach.Url_config.banner_footer;
 import static com.example.lamth.app_tong_the_gioi_sach.Url_config.banner_full;
 import static com.example.lamth.app_tong_the_gioi_sach.Url_config.url_get_ListAllQuyenSach;
+import static com.example.lamth.app_tong_the_gioi_sach.Url_config.url_image_server;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -308,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
                             try{
                                 if(jh[1] != null && jh[1]!= ""){
                                     try {
-                                        String url_anh = "http://adminsachvui.giaynct.com"+ jh[1].toString();
+                                        String url_anh = url_image_server + jh[1].toString();
                                         url_anh = url_anh.replace('\\', '/');
                                         InputStream in = new java.net.URL(url_anh).openStream();
                                         //mIcon11 = BitmapFactory.decodeStream(in);
@@ -380,8 +381,12 @@ public class MainActivity extends AppCompatActivity {
                 }catch (Exception ex){ }
 
                 so_page.setText("" + (currentPage));
-
             }
+
+            if(listdata.size() >= 20){
+                re_next_and_previous.setVisibility(View.VISIBLE);
+            }
+
 //            else{
 //                adapter.clear();
 //                adapter.notifyDataSetChanged();

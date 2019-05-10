@@ -59,6 +59,7 @@ import static com.example.lamth.app_tong_the_gioi_sach.Url_config.banner_footer;
 import static com.example.lamth.app_tong_the_gioi_sach.Url_config.banner_full;
 import static com.example.lamth.app_tong_the_gioi_sach.Url_config.showpop_up_tinh_getlistview;
 import static com.example.lamth.app_tong_the_gioi_sach.Url_config.url_get_3QuyenSach_TheoTheLoaiSach;
+import static com.example.lamth.app_tong_the_gioi_sach.Url_config.url_image_server;
 
 public class MainActivity_Home extends AppCompatActivity {
 
@@ -94,39 +95,39 @@ public class MainActivity_Home extends AppCompatActivity {
     }
 
     // Cấp quyền Permession
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == 1) {
-            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(MainActivity_Home.this, "Permision Write File is Granted", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(MainActivity_Home.this, "Permision Write File is Denied", Toast.LENGTH_SHORT).show();
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        if (requestCode == 1) {
+//            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                Toast.makeText(MainActivity_Home.this, "Permision Write File is Granted", Toast.LENGTH_SHORT).show();
+//            } else {
+//                Toast.makeText(MainActivity_Home.this, "Permision Write File is Denied", Toast.LENGTH_SHORT).show();
+//
+//            }
+//        } else {
+//            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//        }
+//    }
 
-            }
-        } else {
-            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-    }
-
-    public void initPermission(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-
-                //Permisson don't granted
-                if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE))
-                {
-                    Toast.makeText(MainActivity_Home.this, "Permission isn't granted ", Toast.LENGTH_SHORT).show();
-                }
-                // Permisson don't granted and dont show dialog again.
-                else {
-                    Toast.makeText(MainActivity_Home.this, "Permisson don't granted and dont show dialog again ", Toast.LENGTH_SHORT).show();
-                }
-                //Register permission
-                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-
-            }
-        }
-    }
+//    public void initPermission(){
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//            if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+//
+//                //Permisson don't granted
+//                if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE))
+//                {
+//                    Toast.makeText(MainActivity_Home.this, "Permission isn't granted ", Toast.LENGTH_SHORT).show();
+//                }
+//                // Permisson don't granted and dont show dialog again.
+//                else {
+//                    Toast.makeText(MainActivity_Home.this, "Permisson don't granted and dont show dialog again ", Toast.LENGTH_SHORT).show();
+//                }
+//                //Register permission
+//                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+//
+//            }
+//        }
+//    }
 
     // Silder ảnh dùng mảng chứ ko kéo từ Api về.
     public void View_Pager_Slide(){
@@ -188,7 +189,7 @@ public class MainActivity_Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__home);
-        initPermission();
+        //initPermission();
 
         try{
             View_Pager_Slide();
@@ -423,7 +424,7 @@ public class MainActivity_Home extends AppCompatActivity {
                     listdata.clear();
                 } // xóa dữ liệu
 
-                String _getIdQuyenSach = get_dulieu(url_get_3QuyenSach_TheoTheLoaiSach);
+                    String _getIdQuyenSach = get_dulieu(url_get_3QuyenSach_TheoTheLoaiSach);
 
                 try{
                     String[] list_item = _getIdQuyenSach.split("@"); // Tạo biến Mảng List String để loại bỏ @ dùng .split
@@ -444,11 +445,11 @@ public class MainActivity_Home extends AppCompatActivity {
                         Bitmap mHinhAnh = null; // Nếu hình ảnh thì dùng Bitmap
                         if(jh[1] != null && jh[1]!= ""){
                             try {
-                                String url_anh = "http://adminsachvui.giaynct.com"+ jh[1].toString();
+                                String url_anh = url_image_server + jh[1].toString();
                                 url_anh = url_anh.replace('\\', '/');
                                 InputStream in = new java.net.URL(url_anh).openStream();
                                 //mIcon11 = BitmapFactory.decodeStream(in);
-                                mHinhAnh = Url_config.getResizedBitmap(BitmapFactory.decodeStream(in), 150 );
+                                mHinhAnh = Url_config.getResizedBitmap(BitmapFactory.decodeStream(in), 260 );
                             } catch (Exception e) {
                                 Log.e("Error", e.getMessage());
                                 e.printStackTrace();
@@ -511,8 +512,6 @@ public class MainActivity_Home extends AppCompatActivity {
                             viewPager.setCurrentItem(2);
                         } else if(viewPager.getCurrentItem() == 2){
                             viewPager.setCurrentItem(3);
-                        }else if(viewPager.getCurrentItem() == 3){
-                            viewPager.setCurrentItem(4);
                         }else {
                             viewPager.setCurrentItem(0);
                         }
